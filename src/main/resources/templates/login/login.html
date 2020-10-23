@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+	<head>
+		<meta charset="utf-8">
+		<title>登录页面</title>
+		<link rel="stylesheet" href="/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" media="all">
+		<script src="/js/jquery-3.3.1.js" type="text/javascript" th:href="@{/js/jquery-3.3.1.js}"></script>
+		<link rel="stylesheet" href="/css/login/login.css" th:href="@{/css/login/login.css}"/>
+		<script type="text/javascript" src="/js/login/login.js" th:href="@{/js/login/login.js}"></script>
+	</head>
+	<body>
+		<div id="div01">
+			<div id="div01_01"></div>
+			<div id="div01_02">
+				<div id="div01_02_01">
+					<img src="images/login/01.jpg" th:src="@{/images/login/01.jpg}" alt="..." id="img" class="rounded-circle">
+					<p><label style="color: #c0c0c4;">没有账户？</label><a href="/register" th:href="@{/register}">注册</a></p>
+				</div>
+				<div id="div01_02_03">
+					<p style="color: #adb07f;font-size: 40px;font-weight: 800;">今天 你会去改变什么<br/>呢</p>
+					<p style="color: #adb07f;font-size: 15px;font-weight: 800;">开始你的创作之旅</p>					
+				</div>
+				<form id="form" method="post" action="/loginform" onsubmit="return onForms()">
+					<div class="form-group row">
+						<label for="colFormLabel" class="col-sm-2 col-form-label sr-only">用户名</label>
+						<div class="col-sm-12" id="div02">
+							<input type="text" class="form-control" id="userName" name="userName"
+								   placeholder="请输入手机号或邮箱" th:value="${userName}">
+						</div>
+					</div>
+					<div class="form-group row">
+						<label for="colFormLabel" class="col-sm-2 col-form-label sr-only">密码</label>
+						<div class="col-sm-12" id="div02">
+							<input type="password" class="form-control" id="password" name="password"
+								   placeholder="请输入密码" th:value="${passwrod}">
+						</div>
+					</div>
+					<button type="submit" class="btn btn-primary col-sm-12" id="submit">登&emsp; 录</button>
+				</form>
+				<a href="/password" th:href="@{/password}" id="div01_02_02">忘记密码？</a>
+				<span id="span1" th:text="${errorN}"></span>
+				<span id="span2" th:text="${errorP}"></span>
+			</div>
+		</div>
+	</body>
+</html>

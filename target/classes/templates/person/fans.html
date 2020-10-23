@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>我的粉丝</title>
+    <link rel="stylesheet" href="layui/css/layui.css" media="all">
+
+</head>
+
+<style>
+    #people {
+        position: absolute;
+        padding-left: 1130px;
+        padding-top: 20px;
+    }
+
+    #guanzhu {
+        position: absolute;
+        padding-top: 20px;
+        padding-left: 40px;
+    }
+
+    #personal {
+        padding-left: 48px;
+    }
+
+    #personal:hover {
+        color: red;
+    }
+
+    #button {
+        position: absolute;
+        left: 1076px;
+        top: 6px;
+    }
+
+    #num {
+        position: absolute;
+        left: 1090px;
+    }
+
+    #users {
+        position: absolute;
+        left: 115px;
+        top: 12px;
+    }
+
+    .gz {
+        position: absolute;
+        left: 145px;
+        top: 12px;
+    }
+
+    #nums {
+        position: absolute;
+        left: 1110px;
+        top: 23px;
+    }
+</style>
+<body>
+<fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
+    <legend>我的粉丝</legend>
+    <h3 id="guanzhu">我的粉丝</h3>
+    <h3 id="people">
+        <p id="num">共
+        <p id="nums" th:text="${integer}"></p>人</p>
+    </h3>
+</fieldset>
+
+<fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;"></fieldset>
+
+<div th:each="fansUser:${fansUsers}" style="position: relative">
+    <a id="personal" href="#"><img src="" class="layui-nav-img">
+        <p id="users" th:text="${fansUser}"></p>
+        <p class="gz">关注了你</p>
+    </a>
+    <button type="button" id="button" class="layui-btn layui-btn-radius">取消关注</button>
+    <fieldset class="layui-elem-field layui-field-title"></fieldset>
+</div>
+
+<script src="layui/jquery-1.12.4.js" ;charset="utf-8"></script>
+<script>
+    $("#button").click(function () {
+        var text2 = document.getElementById("button").innerHTML;
+        if (text2 == "关注") {
+            $("#button").text("取消关注");
+            alert("取消成功");
+        } else {
+            $("#button").text("关注");
+            alert("关注成功");
+        }
+
+    });
+</script>
+</body>
+
+
+</html>

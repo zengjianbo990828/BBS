@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>评论</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/comment.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+</head>
+<body>
+    <div class="divComment">
+        <div>
+
+            <ul class="commentPage">
+                <li class="li" th:each="comment:${commentList}">
+                    <input type="text" class="id" name="id" th:value="${comment.id}" hidden>
+                    <input type="text" class="commentId" name="commentId" th:value="${comment.commentId}" hidden>
+                    <input type="text" class="postId" name="postId" th:value="${comment.postId}" hidden>
+                    <input type="text" class="userId" name="userId" th:value="${comment.userId}" hidden>
+                    <input type="text" class="replyId" name="replyId" th:value="${comment.replyId}" hidden>
+                    <input type="text" class="userName2" name="userName" th:value="${comment.userName}" hidden>
+                    <input type="text" class="commentCon" name="commentCon" th:value="${comment.commentCon}" hidden>
+                    <img class="photo"  th:src="${'images/'+comment.photo}" src="images/255e2f6cbf2cd0ea6d66ba1c5e991f8f.jpg">
+                    <p class="userName"><a href="#" th:text="${comment.userName}">张三</a><span th:text="${#dates.format(comment.createDate,'yyyy-MM-dd HH:mm:ss')}" class="createDate">2000/2/2 7:10</span><span th:if="${comment.flag}" class="author">作者</span><span><img th:if="${comment.flag==true}" class="delete" src="/images/delete2.png"> </span></p>
+                    <p class="content" ><span th:text="${comment.content}">士大夫大师傅但是看JFK的实力解放昆仑山搭街坊分的考生看来飞机迪斯科飞机的数量就发的时刻分手的借口士大夫艰苦三菱电机发来的数据犯得上看见分厘卡电视机分厘卡电视机离开错</span><a class="commentSize" href="javascript:void(0)">更多<span class="commentSize2" th:text="${comment.commentSize -1}">100</span>条评论</a> </p>
+                    <p class="gives">
+                        <img th:if="${comment.whetherStar==true}" th:src="@{images/give.png}" class="star" src="images/give.png">
+                        <img th:if="${comment.whetherStar==false}" th:src="@{images/star.png}" class="star" src="images/give.png">
+                        <span class="star2"  th:text="${comment.star}"></span>
+                        <input class="whetherStar" type="hidden" value="false" th:value="${comment.whetherStar}">
+                    </p>
+                    <p class="reply"><button  type="button" class="btn btn-info">回复</button></p>
+                    <ul class="conLi">
+                        <li th:each="conComment:${comment.commentObjects}">
+                            <input type="text" class="commentId" name="commentId" th:value="${conComment.commentId}" hidden>
+                            <input type="text" class="postId" name="postId" th:value="${conComment.postId}" hidden>
+                            <input type="text" class="userId" name="userId" th:value="${conComment.userId}" hidden>
+                            <input type="text" class="replyId" name="replyId" th:value="${conComment.replyId}" hidden>
+                            <input type="text" class="userName2" name="userName" th:value="${conComment.userName}" hidden>
+                            <input type="text" class="commentCon" name="commentCon" th:value="${conComment.commentCon}" hidden>
+                            <img class="photo" th:src="${'images/'+conComment.photo}"  src="images/255e2f6cbf2cd0ea6d66ba1c5e991f8f.jpg">
+                            <p class="userName"><a th:text="${conComment.userName}" href="#">张三</a><span th:text="${#dates.format(conComment.createDate,'yyyy-MM-dd HH:mm:ss')}" class="createDate">2000/2/2 7:10</span><span th:if="${conComment.flag}" class="author">作者</span></p>
+
+                            <p class="content" th:if="${!#strings.isEmpty(conComment.replyId) && conComment.replyId!='0'}">评论 &nbsp;<a href="#" th:text="${conComment.replyName}+':'"></a><span th:text="${conComment.content}">士大夫大师傅但是看JFK的实力解放昆仑山搭街坊分的考生看来飞机迪斯科飞机的数量就发的时刻分手的借口士大夫艰苦三菱电机发来的数据犯得上看见分厘卡电视机分厘卡电视机离开错</span> </p>
+
+                            <p class="content" th:if="${#strings.isEmpty(conComment.replyId) || conComment.replyId=='0'}"><span th:text="${conComment.content}">士大夫大师傅但是看JFK的实力解放昆仑山搭街坊分的考生看来飞机迪斯科飞机的数量就发的时刻分手的借口士大夫艰苦三菱电机发来的数据犯得上看见分厘卡电视机分厘卡电视机离开错</span></p>
+                            <p class="gives" th:value="${conComment.whetherStar}">
+                                <img th:if="${conComment.whetherStar==true}" th:src="@{images/give.png}" class="star" src="images/give.png">
+                                <img th:if="${conComment.whetherStar==false}" th:src="@{images/star.png}" class="star" src="images/give.png">
+                                <span class="star2" th:text="${conComment.star}"></span>
+                                <input class="whetherStar" type="hidden" value="false" th:value="${conComment.whetherStar}">
+                            </p>
+                            <p class="reply"><button type="button" class="btn btn-info">回复</button></p>
+                        </li>
+                    </ul>
+                    <div>
+                        <p class="conComment2"><button type="button" class="btn btn-info">我要评论</button></p>
+                    </div>
+
+                </li>
+            </ul>
+            <div class="comment2">
+                <form method="post" action="">
+                    <h4>发表评论:</h4>
+                    <textarea class="comment"></textarea>
+                    <button type="button" id="submitComment" class="submitComment btn btn-primary">发表评论</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+
+</script>
+<script type="text/javascript" src="js/comment.js"></script>
+</html>

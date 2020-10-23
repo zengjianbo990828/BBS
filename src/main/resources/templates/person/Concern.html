@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>我的关注</title>
+    <link rel="stylesheet" href="./layui/css/layui.css" media="all">
+
+</head>
+
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    #people {
+        position: absolute;
+        padding-left: 1170px;
+        padding-top: 20px;
+    }
+
+    #guanzhu {
+        position: absolute;
+        padding-top: 20px;
+        padding-left: 40px;
+    }
+
+    #personal {
+        padding-left: 46px;
+    }
+
+    #personal:hover {
+        color: red;
+    }
+
+    #button {
+        position: absolute;
+        left: 1170px;
+    }
+
+    /*#time {*/
+    /*    position: absolute;*/
+    /*    padding-left: 900px;*/
+    /*    padding-top: 20px;*/
+    /*}*/
+
+    #timetext {
+        padding-left: 980px;
+    }
+
+    #num {
+        position: absolute;
+        left: 1090px;
+    }
+
+    #nums {
+        position: absolute;
+        left: 1110px;
+        top: 23px;
+    }
+
+    #users {
+        position: absolute;
+        left: 110px;
+        top: 160px;
+    }
+
+    .Icon {
+        position: absolute;
+        left: 140px;
+        top: 160px;
+    }
+</style>
+<body>
+<fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
+    <legend>我的关注</legend>
+    <h3 id="guanzhu">我的关注</h3>
+    <h3 id="people">
+        <p id="num">共
+        <p id="nums" th:text="${integer}"></p>人</p>
+    </h3>
+</fieldset>
+
+<fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;"></fieldset>
+
+<div th:each="fansUserCon:${fansUserCon}">
+    <a id="personal" href="#"><img src="img/4.jpg" class="layui-nav-img">
+        <p id="users" th:text="${fansUserCon.get('userName')}"></p>
+        <p class="Icon">关注了你</p>
+    </a>
+    <text id="timetext" th:text="${#dates.format(fansUserCon.get('date'), 'yyyy-MM-dd')}"></text>
+    <button type="button" id="button" class="layui-btn layui-btn-radius">删除</button>
+    <fieldset class="layui-elem-field layui-field-title"></fieldset>
+</div>
+
+<script src="./layui/jquery-1.12.4.js" ;charset="utf-8"></script>
+<script>
+    $("#button").click(function () {
+        var text2 = document.getElementById("button").innerHTML;
+        alert(text2);
+        if (text2 == "关注") {
+            $("#button").text("取消关注");
+            alert("取消成功");
+        } else {
+            $("#button").text("关注");
+            alert("关注成功");
+        }
+
+    });
+</script>
+</body>
+
+
+</html>

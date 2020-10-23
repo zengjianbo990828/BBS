@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>BBS论坛系统</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="stylesheet" href="./layui/css/layui.css" media="all">
+</head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-header">
+        <div class="layui-logo">个人管理</div>
+        <!-- 头部区域（可配合layui已有的水平导航） -->
+        <ul class="layui-nav layui-layout-left">
+            <li class="layui-nav-item"><a href="">控制台</a></li>
+            <li class="layui-nav-item"><a href="">商品管理</a></li>
+            <li class="layui-nav-item"><a href="">用户</a></li>
+            <li class="layui-nav-item">
+                <a href="javascript:;">其它系统</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="">邮件管理</a></dd>
+                    <dd><a href="">消息管理</a></dd>
+                    <dd><a href="">授权管理</a></dd>
+                </dl>
+            </li>
+        </ul>
+        <ul class="layui-nav layui-layout-right">
+            <li class="layui-nav-item">
+                <a href="javascript:;">
+                    <img src="//tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg"
+                         class="layui-nav-img">
+                    2 贤心
+                </a>
+                <dl class="layui-nav-child">
+                    <dd><a href="">基本资料</a></dd>
+                    <dd><a href="">安全设置</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item"><a href="">退了</a></li>
+        </ul>
+    </div>
+
+    <div class="layui-side layui-bg-black">
+        <div class="layui-side-scroll">
+            <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+            <ul class="layui-nav layui-nav-tree" lay-filter="test">
+                <li class="layui-nav-item layui-nav-itemed">
+                    <a class="" href="javascript:;">个人资料</a>
+                    <dl class="layui-nav-child">
+                        <dd><a data-url="UserInfo?uid=1" data-id="11" data-title="个人中心" class="site-demo-active"
+                               data-type="tabAdd">个人中心</a>
+                        </dd>
+<!--                        <dd><a data-url="UserInfo1" data-id="12" data-title="选项b" class="site-demo-active"-->
+<!--                               data-type="tabAdd">个人中心</a></dd>-->
+                        <dd><a data-url="/queryUserConcern?uid=1" data-id="13" data-title="我的关注" class="site-demo-active"
+                               data-type="tabAdd">我的关注</a></dd>
+                        <dd><a data-url="/queryUsersFans?uid=1" data-id="14" data-title="我的粉丝" class="site-demo-active"
+                               data-type="tabAdd">我的粉丝</a></dd>
+                        <dd><a data-url="/queryUserLikeInfo?uid=1" data-id="15" data-title="我的点赞" class="site-demo-active"
+                               data-type="tabAdd">我的点赞</a></dd>
+                        <dd><a data-url="index2" data-id="16" data-title="我的评论" class="site-demo-active"
+                               data-type="tabAdd">我的评论</a></dd>
+                        <dd><a data-url="index2" data-id="17" data-title="我的收藏" class="site-demo-active"
+                               data-type="tabAdd">我的收藏</a></dd>
+                    </dl>
+                </li>
+<!--                <li class="layui-nav-item">-->
+<!--                    <a href="javascript:;">解决方案</a>-->
+<!--                    <dl class="layui-nav-child">-->
+<!--                        <dd><a href="javascript:;">列表一</a></dd>-->
+<!--                        <dd><a href="javascript:;">列表二</a></dd>-->
+<!--                        <dd><a href="">超链接</a></dd>-->
+<!--                    </dl>-->
+<!--                </li>-->
+                <li class="layui-nav-item"><a data-url="index2" data-id="14" data-title="选项d" class="site-demo-active"
+                                              data-type="tabAdd">云市场</a></li>
+                <li class="layui-nav-item"><a href="">发布商品</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="layui-body">
+        <div class="layui-tab" lay-filter="demo" lay-allowclose="true">
+            <ul class="layui-tab-title">
+            </ul>
+            <ul class="rightmenu" style="display: none;position: absolute;">
+                <li data-type="closethis">关闭当前</li>
+                <li data-type="closeall">关闭所有</li>
+            </ul>
+            <div class="layui-tab-content">
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="layui-footer">
+        <!-- 底部固定区域 -->
+    </div>
+</div>
+<script src="layui/jquery-1.12.4.js"></script>
+<script>
+
+</script>
+<script src="./layui/layui.all.js" charset="utf-8"></script>
+<script src="./layui/hs01.js"></script>
+
+</body>
+</html>

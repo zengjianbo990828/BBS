@@ -1,0 +1,88 @@
+body {
+	background: url(/images/login/01.jpg) no-repeat center center fixed;
+	background-size: cover;
+}
+
+#div01 {
+	height: 500px;
+	width: 820px;
+	position: absolute;
+	top: 12%;
+	left: 28%;
+	/* box-shadow: -1px 1px 10px #F0F0F0; */
+}
+
+#div01_01 {
+	float: left;
+	opacity: 0.3;
+	width: 500px;
+	height: 500px;
+	background-color: #F7F7F7;
+}
+
+#div01_02 {
+	float: right;
+	width: 320px;
+	height: 500px;
+	background-color: #FDFDFE;
+}
+
+#form {
+	position: absolute;
+	top: 45%;
+	right: 4%;
+}
+
+#div02 {
+	width: 280px;
+	margin-bottom: 8px;
+}
+
+#submit {
+	position: absolute;
+
+}
+
+#div01_02_01 {
+	position: absolute;
+	top: 3%;
+	right: 9%;
+}
+
+#div01_02_01 p {
+	position: relative;
+	left: 15%;
+}
+
+#img {
+	height: 110px;
+	width: 110px;
+	margin: 25px;
+}
+
+#div01_02_02 {
+	position: absolute;
+	bottom: 3%;
+	right: 13%;
+}
+
+#div01_02_03 {
+	position: absolute;
+	left: 5%;
+}
+
+#span1 {
+	position: absolute;
+	left: 66%;
+	top: 52.8%;
+	font-size: 12px;
+	color: #f32323d1;
+}
+
+#span2 {
+	position: absolute;
+	left: 66%;
+	top: 65.5%;
+	font-size: 12px;
+	color: #f32323d1;
+}

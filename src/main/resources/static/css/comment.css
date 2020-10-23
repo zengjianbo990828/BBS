@@ -1,0 +1,162 @@
+
+ul{
+    list-style: none;
+    width: 900px;
+}
+ul ul{
+    width: 810px;
+    margin-top: 50px;
+}
+ul ul li{
+    /*border: none;*/
+}
+ul ul .content{
+    width: 550px;
+}
+ul ul .gives{
+
+}
+a{
+    font-size: 15px;
+}
+li{
+    border: 1px solid black;
+
+}
+.give span{
+    position: relative;
+    top: 20px;
+}
+.photo{
+    position: relative;
+    top: 20px;
+    left: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius:50%;
+}
+.userName{
+    position: relative;
+    margin-top: -20px;
+    left: 80px;
+}
+.createDate{
+    position: relative;
+    left: 50px;
+}
+.content{
+    position: relative;
+    width: 600px;
+    left: 80px;
+}
+.star{
+    cursor:pointer;
+    width: 20px;
+    height: 20px;
+}
+.gives{
+    position: relative;
+    float: right;
+    right: 50px;
+    margin-top: -80px;
+}
+.reply{
+    position: relative;
+    float: right;
+    right: 50px;
+    margin-top: -35px;
+
+}
+.reply button{
+    line-height: 20px;
+    width: 70px;
+    height: 30px;
+}
+.conComment{
+    position: relative;
+    float: right;
+    top: 25px;
+}
+form{
+    /*position: fixed;*/
+
+}
+.commentPage li{
+    background-color: #eee;
+}
+/*.publishComment{
+    position: fixed;
+    top: 500px;
+    width: 860px;
+    height: 300px;
+
+}*/
+.form .content{
+    position: relative;
+    left: 40px;
+    width: 640px;
+    height: 100px;
+}
+.submit{
+    line-height: 5px;
+    width: 70px;
+    height: 35px;
+    position: relative;
+    top: 30px;
+    left: 90px;
+}
+.conComment2{
+    position: relative;
+    top: 10px;
+    left: 720px;
+}
+.submitComment{
+    position: relative;
+    left: 50px;
+    margin-top: -50px;
+}
+.comment{
+
+
+    width: 500px;
+    height: 150px;
+}
+.comment2{
+    position: relative;
+    left: 40px;
+}
+.commentSize{
+    position: relative;
+    float: right;
+    top: 10px;
+
+}
+
+.author{
+    position: relative;
+    left: 60px;
+    cursor: default;
+    width: 20px;
+    height: 20px;
+    color: cornflowerblue;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: #d3d9df;
+    border-radius:10px;
+    border: 1px none;
+}
+
+.delete{
+    cursor:pointer;
+    position: relative;
+    margin-top: -5px;
+    /*float: right;*/
+    /*right: 90px;*/
+    left: 120px;
+    height: 20px;
+    width: 20px;
+}
+
+.commentPage{
+
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<base th:href="${#httpServletRequest.getScheme()+'://'+#httpServletRequest.getServerName()+':'+#httpServletRequest.getServerPort()+#httpServletRequest.getContextPath()+'/'} ">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript"  src="js/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#blackReturn").click(function () {
+                const s = '[[${prePageName}]]';
+                if (s==''&&s.length==0){
+                    window.history.back()
+                }else{
+                    window.location.href=s;
+                }
+            })
+        })
+
+    </script>
+</head>
+<body>
+<h2 th:text="${message}"></h2>
+<button id="blackReturn">返回</button>
+</body>
+</html>

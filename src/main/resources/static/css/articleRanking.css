@@ -1,0 +1,74 @@
+
+
+.give{
+    width: 15px;
+    height: 15px;
+}
+
+ul{
+    list-style: none;
+}
+li{
+    position: relative;
+    padding-left: 30px;
+    height: 36px;
+    line-height: 36px;
+}
+
+.rank_list li.top3 em{background:#FFE4B7;border:1px solid #FFBB8B;color:#FF6800;}
+
+.rank_list em{
+    position:absolute;
+    left:5px;top:15px;
+    width:22px;
+    height:22px;
+    padding-top: 3px;
+    border:1px solid #B1E0F4;color:#6298CC;font-style:normal;font-size:10px;font-family:Arial;background:#E6F0FD;text-align:center;line-height:12px;overflow:hidden;}
+
+#articleRanking{
+    position: relative;
+    margin-top: -100px;
+    right: 40px;
+}
+#rankingTag{
+    position: relative;
+    top: 150px;
+}
+*{ margin:0; padding:0;}
+.rank_list{
+
+    padding-left: -10px;
+    width: 700px;
+    height: 800px;
+    margin: 50px auto;
+}
+
+.rank_list li{
+    width: 700px;
+    height: 80px;
+    float: left;
+    border: 1px solid #999;
+    margin: 0 0 -1px -1px;
+}
+a{
+    font-size: 20px;
+}
+.content{
+    position: relative;
+    font-size: 15px;
+    margin-top: -13px;
+}
+
+.content span{
+    position: relative;
+    right: 42px;
+    margin-top: -20px;
+    float: right;
+    font-size: 10px;
+}
+#articleRanking2{
+    position: relative;
+    margin-top: -100px;
+}
+
+

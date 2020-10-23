@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>排行榜</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/articleRanking.css" rel="stylesheet">
+
+    <link href="css/userRanking.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <div id="articleRanking">
+        <div id="rankingTag" th:insert="~{commons/rankingTitle::title}"></div>
+        <h2 style="position: relative;left: 200px;top: 48px" id="articleRanking2">用户排行</h2>
+        <div class="box2" id="movie_rank">
+            <div class="inner">
+                <ul class="rank_list">
+                    <li class="top3">
+                        <em>1</em>
+                        <img class="headPortrait" src="images/255e2f6cbf2cd0ea6d66ba1c5e991f8f.jpg">
+                        <a target="_blank" href="http://www.csrcode.cn/html/txdm/cddh/1034.htm">张三</a>
+                        <p class="content">今天是个好日子<br><span><img class="give" src="images/give.png">62121</span></p>
+                        <p class="follow"><button type="button" class="btn btn-primary">+关注</button></p>
+                        <p class="fans"><img class="fans2" src="images/fans.png">粉丝数：100000000 </p>
+                    </li>
+                    <li class="top3"><em>2</em>
+                        <img class="headPortrait" src="images/255e2f6cbf2cd0ea6d66ba1c5e991f8f.jpg">
+                        <a target="_blank"
+                                                  href="http://www.csrcode.cn/html/txdm/tcys/1061.htm">
+                            张三</a>
+                        <p class="content">今天是个好日子<br><span><img class="give" src="images/give.png">528</span></p>
+                        <p class="follow"><button type="button" class="btn btn-primary">+关注</button></p>
+                        <p class="fans"><img class="fans2" src="images/fans.png">粉丝数：100000000 </p>
+                    </li>
+                    <li class="top3"><em>3</em>
+                        <img class="headPortrait" src="images/255e2f6cbf2cd0ea6d66ba1c5e991f8f.jpg">
+                        <a target="_blank"
+                                                  href="http://www.csrcode.cn/html/txdm/tcys/1061.htm">
+                            张三</a>
+                        <p class="content">今天是个好日子<br><span><img class="give" src="images/give.png">528</span></p>
+                        <p class="follow"><button type="button" class="btn btn-primary">+关注</button></p>
+                        <p class="fans"><img class="fans2" src="images/fans.png">粉丝数：100000000 </p>
+                    </li>
+                    <li><em>4</em>
+                        <img class="headPortrait" src="images/255e2f6cbf2cd0ea6d66ba1c5e991f8f.jpg">
+                        <a target="_blank"
+                                     href="http://www.csrcode.cn/html/txdm/tcys/1059.htm">
+                            张三</a>
+                        <p class="content">今天是个好日子<br><span><img class="give" src="images/give.png">528</span></p>
+                        <p class="follow"><button type="button" class="btn btn-primary">+关注</button></p>
+                        <p class="fans"><img class="fans2" src="images/fans.png">粉丝数：100000000 </p>
+                    </li>
+                    <li><em>5</em>
+                        <img class="headPortrait" src="images/255e2f6cbf2cd0ea6d66ba1c5e991f8f.jpg">
+                        <a  target="_blank"
+                                     href="http://www.csrcode.cn/html/txdm/tcys/1059.htm">
+                            张三</a>
+                        <p class="content">今天是个好日子<br><span><img class="give" src="images/give.png">528</span></p>
+                        <p class="follow"><button type="button" class="btn btn-primary">+关注</button></p>
+                        <p class="fans"><img class="fans2" src="images/fans.png">粉丝数：100000000 </p>
+                    </li>
+                    <li><em>6</em>
+                        <img class="headPortrait" src="images/255e2f6cbf2cd0ea6d66ba1c5e991f8f.jpg">
+                        <a target="_blank"
+                                     href="http://www.csrcode.cn/html/txdm/tcys/1059.htm">
+                            张三</a>
+                        <p class="content">今天是个好日子<br><span><img class="give" src="images/give.png">528</span></p>
+                        <p class="follow"><button type="button" class="btn btn-primary">+关注</button></p>
+                        <p class="fans"><img class="fans2" src="images/fans.png">粉丝数：100000000 </p>
+                    </li>
+                    <li><em>7</em>
+                        <img class="headPortrait" src="images/255e2f6cbf2cd0ea6d66ba1c5e991f8f.jpg">
+                        <a target="_blank"
+                                     href="http://www.csrcode.cn/html/txdm/tcys/1059.htm">
+                            张三</a>
+                        <p class="content">今天是个好日子<br><span><img class="give" src="images/give.png">528</span></p>
+                        <p class="follow"><button type="button" class="btn btn-primary">+关注</button></p>
+                        <p class="fans"><img class="fans2" src="images/fans.png">粉丝数：100000000 </p>
+                    </li>
+                    <li><em>8</em>
+                        <img class="headPortrait" src="images/255e2f6cbf2cd0ea6d66ba1c5e991f8f.jpg">
+                        <a target="_blank"
+                                     href="http://www.csrcode.cn/html/txdm/tcys/1059.htm">
+                            张三</a>
+                        <p class="content">今天是个好日子<br><span><img class="give" src="images/give.png">528</span></p>
+                        <p class="follow"><button type="button" class="btn btn-primary">+关注</button></p>
+                        <p class="fans"><img class="fans2" src="images/fans.png">粉丝数：100000000 </p>
+                    </li>
+                    <li><em>9</em>
+                        <img class="headPortrait" src="images/255e2f6cbf2cd0ea6d66ba1c5e991f8f.jpg">
+                        <a target="_blank"
+                                     href="http://www.csrcode.cn/html/txdm/tcys/1059.htm">
+                            张三</a>
+                        <p class="content">今天是个好日子<br><span><img class="give" src="images/give.png">2528万</span></p>
+                        <p class="follow"><button type="button" class="btn btn-primary">+关注</button></p>
+                        <p class="fans"><img class="fans2" src="images/fans.png">粉丝数：1000000 </p>
+                    </li>
+                    <li><em>10</em>
+                        <img class="headPortrait" src="images/255e2f6cbf2cd0ea6d66ba1c5e991f8f.jpg">
+                        <a target="_blank"
+                                      href="http://www.csrcode.cn/html/txdm/tcys/1059.htm">
+                            张三</a>
+                        <p class="content">今天是个好日子<br><span><img class="give" src="images/give.png">528万</span></p>
+                        <p class="follow"><button type="button" class="btn btn-primary">+关注</button></p>
+                        <p class="fans"><img class="fans2" src="images/fans.png"><span>粉丝数：10000</span> </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

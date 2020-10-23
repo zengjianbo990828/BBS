@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>我的点赞</title>
+    <link rel="stylesheet" href="./layui/css/layui.css" media="all">
+</head>
+<style>
+    #people {
+        position: absolute;
+        padding-left: 1080px;
+        padding-top: 23px;
+    }
+
+    #guanzhu {
+        position: absolute;
+        padding-top: 23px;
+        padding-left: 40px;
+    }
+
+    #clean {
+
+        position: absolute;
+        padding-left: 1080px;
+        padding-top: 1px;
+    }
+
+    #user:hover {
+        color: red;
+    }
+
+    #time {
+        padding-left: 882px;
+        padding-top: 8px;
+    }
+
+    #Post:hover {
+        color: red;
+    }
+
+    #all {
+        padding-left: 39px;
+    }
+</style>
+
+<body>
+<fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
+    <legend>我的点赞</legend>
+    <h3 id="guanzhu">我的点赞</h3>
+    <a id="clean" href="#">清空所有消息</a>
+    <h3 id="people">时间</h3>
+</fieldset>
+<div>
+    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;"></fieldset>
+    <div id="all">
+        <a href="#" id="user">admin</a>点赞了你的
+        <a href="#" id="Post">帖子名</a>
+        <text id="time">2020-11-12</text>
+    </div>
+    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 10px;"></fieldset>
+</div>
+</body>
+</html>
